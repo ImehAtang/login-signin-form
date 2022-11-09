@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Log In</title>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <div class="head login">
+                Login Form
+            </div>
+            <div class="head signup">
+                SignUp Form
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slider-cntrl">
+                <input type="radio" name="slider" id="login" checked> 
+                <input type="radio" name="slider" id="signup">
+                <label for="login" class="slider login">Login</label>
+                <label for="signup" class="slider signup">SignUp</label>
+                <div class="slide-tab"></div>
+            </div>
+            <div class="form-data">
+                <form action="" class="login">
+                    <div class="fields">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="fields">
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <div class="forgot">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <div class="fields btn">
+                        <div class="btn-style"></div>
+                        <input type="submit" value="Login">
+                    </div>
+                    <div class="signuplink">
+                        Not a Member? <a href="#">Signup Now</a>
+                    </div>
+                </form>
+
+                <form action="#" class="signup">
+                    <div class="fields">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+
+                    <div class="fields">
+                        <input type="password" placeholder="Password">
+                    </div>
+
+                    <div class="fields">
+                        <input type="password" placeholder="Confirm Password" required>
+                    </div>
+
+                    <div class="fields btn">
+                        <div class="btn-style"></div>
+                        <input type="submit" value="SignUp">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+        let heading = document.querySelector(".heading .login");
+        let formData = document.querySelector("form.login");
+        let initialBtn = document.querySelector("label.login");
+        let nextBtn = document.querySelector("label.signup");
+        let signupnow = document.querySelector("form .signuplink a");
+    
+        nextBtn.onclick =(()=>{
+            formData.style.marginLeft ="-50%";
+            heading.style.marginLeft ="-50%";
+        });
+        initialBtn.onclick =(()=>{
+            formData.style.marginLeft ="0%";
+            heading.style.marginLeft ="0%";
+        });
+        signupnow.onclick =(()=>{
+            nextBtn.click();
+            return false;
+        });
+</script>
+</html>
